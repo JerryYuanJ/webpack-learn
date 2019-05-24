@@ -9,9 +9,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            my: path.resolve(path.join(__dirname, 'src/my-module.js')),
-            diff: ['lodash', 'difference'],
+        new webpack.DefinePlugin({
+            ppp: '"Papa"',
+            jerry: JSON.stringify('jerry'),
+            'process.env.NODE_ENV': '"WHAT"',
+            two: '1+1',
+            print: 'console.info'
         })
     ]
 }

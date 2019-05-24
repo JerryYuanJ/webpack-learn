@@ -126,7 +126,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(my, diff) {const message = my.testMyModule('hello')\nconsole.info(message)\n\nconst arr1 = [1,2,3]\nconst arr2 = [4,2,6]\nconsole.info(diff(arr1, arr2))\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./src/my-module.js */ \"./src/my-module.js\"), __webpack_require__(/*! lodash */ \"./node_modules/_lodash@4.17.11@lodash/lodash.js\")[\"difference\"]))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("/* WEBPACK VAR INJECTION */(function(my, diff) {const message = my.testMyModule('hello')\nconsole.info(message) // >>>>hello<<<\n\nconst arr1 = [1,2,3]\nconst arr2 = [4,2,6]\nconsole.info(diff(arr1, arr2)) // [1,3]\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./src/my-module.js */ \"./src/my-module.js\"), __webpack_require__(/*! lodash */ \"./node_modules/_lodash@4.17.11@lodash/lodash.js\")[\"difference\"]))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
