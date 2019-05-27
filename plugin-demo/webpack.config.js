@@ -1,4 +1,5 @@
 const path = require('path')
+const FileListPlugin = require('./plugins/filelist-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -7,6 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    
+    new FileListPlugin()
   ]
 }
